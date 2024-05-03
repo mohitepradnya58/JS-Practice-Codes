@@ -1,0 +1,17 @@
+<script>
+  const objEmpty = (obj) => {
+    //1.  return Object.keys(obj).length !== 0;
+
+    //2.
+    for (let key in obj) {
+      if (obj.hasOwnProperty(key)) {
+        return true;
+      }
+    }
+    return false;
+  };
+  console.log(objEmpty({}));
+  console.log(objEmpty({ first: null }));
+  console.log(objEmpty({ second: undefined }));
+  console.log(objEmpty({ third: "Name" }));
+</script>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /* 1.  const compateArr = (arr1, arr2) => {
+        if (arr1.length !== arr2.length) {
+          return false;
+        }
+        for (i = 0; i < arr1.length; i++) {
+          if (arr1[i] !== arr2[i]) {
+            return false;
+          }
+        }
+        return true;
+      };
+*/
+
+      const compateArr = (arr1, arr2) => {
+        if (arr1.length !== arr2.length) {
+          return false;
+        }
+        return arr1.every((curr, index) => curr === arr2[index]);
+      };
+
+      console.log(compateArr([1, 2, 3], [1, 2, 4]));
+      console.log(compateArr([1, 2, 3], [1, 2, 3]));
+      console.log(compateArr([], []));
+
+      /* 3. const array1 = [1, 2, 3];
+      const array2 = [1, 2, 3];
+
+      let isEqual = true;
+      if (array1.length === array2.length) {
+        for (let i = 0; i < array1.length; i++) {
+          if (array1[i] !== array2[i]) {
+            isEqual = false;
+            break;
+          }
+        }
+      } else {
+        isEqual = false;
+      }
+
+      if (isEqual) {
+        console.log("Arrays are equal");
+      } else {
+        console.log("Arrays are not equal");
+      }*/
+    </script>
+  </body>
+</html>

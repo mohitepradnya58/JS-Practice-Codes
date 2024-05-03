@@ -1,0 +1,10 @@
+<script>
+  const truncateStr = (str, num) => {
+    if (num <= 0) {
+      return str;
+    }
+    str = str.slice(0, num);
+    return str.concat("...");
+  };
+  console.log(truncateStr("A-tisket a tisket a green and yellow a basket", 8));
+</script>

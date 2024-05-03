@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const areAnagrams = (str1, str2) => {
+        str1 = str1.replace(/[^a-zA-Z0-9]/g, "").toLowerCase();
+        str2 = str2.replace(/[^a-zA-Z0-9]/g, "").toLowerCase();
+
+        let str11 = str1.split("").sort().join("");
+
+        let str12 = str2.split("").sort().join("");
+
+        return str11 === str12;
+      };
+
+      console.log(areAnagrams("listen", "silent")); // Output: true
+      console.log(areAnagrams("hello", "world")); // Output: false
+      console.log(areAnagrams("rail safety", "fairy tales")); // Output: true
+    </script>
+  </body>
+</html>

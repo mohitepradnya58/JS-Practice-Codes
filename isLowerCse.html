@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const isLowerCase = (char) => {
+        /*1return char === char.toLowerCase();*/
+
+        /*2   if (char.charCodeAt(0) >= 97 && char.charCodeAt(0) <= 127) {
+          return true;
+        } else {
+          return false;
+        }*/
+
+        return char.charCodeAt(0) >= 97 && char.charCodeAt(0) <= 122;
+      };
+
+      console.log(isLowerCase("s"));
+
+      console.log(isLowerCase("S"));
+    </script>
+  </body>
+</html>

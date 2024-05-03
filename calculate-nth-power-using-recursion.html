@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const calPower = (a, b) => {
+        if (b === 0) {
+          return 1;
+        } else {
+          return a * calPower(a, b - 1);
+        }
+      };
+
+      console.log(calPower(2, 3));
+      console.log(calPower(5, 5));
+    </script>
+  </body>
+</html>

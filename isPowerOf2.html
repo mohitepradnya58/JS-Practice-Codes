@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*1.  const powerOfTwo = (num) => {
+        let op = false;
+
+        for (i = 1; i < num; i++) {
+          if (2 ** i === num) {
+            return true;
+          }
+        }
+        return false;
+      };
+*/
+
+      function powerOfTwo(number) {
+        return (number & (number - 1)) === 0 && number !== 0;
+      }
+      console.log(powerOfTwo(4));
+      console.log(powerOfTwo(10));
+    </script>
+  </body>
+</html>

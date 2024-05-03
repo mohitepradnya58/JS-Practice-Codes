@@ -1,0 +1,10 @@
+<script>
+  const checkStart = (str, substr) => {
+    /*1 return str.toLowerCase().startsWith(substr.toLowerCase());*/
+
+    return str.toLowerCase().slice(0, substr.length) === substr.toLowerCase();
+  };
+
+  console.log(checkStart("Hello world", "hello"));
+  console.log(checkStart("Hello world", "world"));
+</script>

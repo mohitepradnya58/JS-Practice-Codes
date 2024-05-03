@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /* const factorialize = (num) => {
+        if (num === 0 || num === 1) {
+          return 1;
+        }
+        return num * factorialize(num - 1);
+      };
+*/
+
+      /*   const factorialize = (num) => {
+        let fact = 1;
+        for (i = 1; i <= num; i++) {
+          fact = fact * i;
+        }
+        return fact;
+      };*/
+
+      const factorialize = (num) => {
+        if (num <= 1) {
+          return 1;
+        }
+        return num * factorialize(num - 1);
+      };
+
+      console.log(factorialize(5));
+      console.log(factorialize(0));
+    </script>
+  </body>
+</html>

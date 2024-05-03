@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Filtering</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .tabs {
+        display: flex;
+        gap: 2.5rem;
+        list-style: none;
+        justify-content: center;
+        padding: 2rem 0;
+      }
+      .image-container {
+        display: flex;
+        gap: 2.5rem;
+        flex-wrap: wrap;
+        padding: 1rem;
+        justify-content: center;
+      }
+      .image-container img {
+        width: 100%;
+        height: 100%;
+        border-radius: 24px;
+
+        object-fit: cover;
+      }
+      .images {
+        width: 25%;
+        min-height: 250px;
+      }
+      .tabs li {
+        border: 1px solid blue;
+        padding: 0.5em 0.6em;
+        border-radius: 4px;
+        color: blue;
+      }
+      .tabs li:first-child {
+        background-color: blue;
+        color: white;
+      }
+      @media screen and (max-width: 768px) {
+        .images {
+          width: 100%;
+        }
+        .tabs {
+          gap: 1.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="menu_tabs">
+      <ul class="tabs">
+        <li data-category="All">All</li>
+        <li data-category="Animals">Animals</li>
+        <li data-category="Birds">Birds</li>
+        <li data-category="Nature">Nature</li>
+      </ul>
+    </section>
+    <section class="image-container">
+      <div class="images" data-category="Animals">
+        <img
+          src="https://images.pexels.com/photos/792381/pexels-photo-792381.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          alt=""
+        />
+      </div>
+      <div class="images" data-category="Animals">
+        <img
+          src="https://images.pexels.com/photos/34231/antler-antler-carrier-fallow-deer-hirsch.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          alt=""
+        />
+      </div>
+      <div class="images" data-category="Birds">
+        <img
+          src="https://images.pexels.com/photos/19867915/pexels-photo-19867915/free-photo-of-seagull-flying-over-sea.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        />
+      </div>
+      <div class="images" data-category="Birds">
+        <img
+          src="https://images.pexels.com/photos/22476019/pexels-photo-22476019/free-photo-of-close-up-of-a-wild-duck-in-flight.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          alt=""
+        />
+      </div>
+      <div class="images" data-category="Nature">
+        <img
+          src="https://images.pexels.com/photos/707344/pexels-photo-707344.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          alt=""
+        />
+      </div>
+    </section>
+
+    <script>
+      const tabs = document.querySelector(".tabs");
+      const images = document.querySelectorAll(".images");
+
+      tabs.addEventListener("click", (event) => {
+        if (event.target.dataset.category !== undefined) {
+          filterImage(event.target.dataset.category);
+          updateTabs(event.target);
+        }
+      });
+
+      const filterImage = (val) => {
+        images.forEach((curElm) => {
+          if (curElm.dataset.category === val || val === "All") {
+            curElm.style.display = "block";
+          } else {
+            curElm.style.display = "none";
+          }
+        });
+      };
+      const updateTabs = (selectedTab) => {
+        const tabs = document.querySelectorAll(".tabs li");
+        tabs.forEach((tab) => {
+          if (tab === selectedTab) {
+            tab.style.backgroundColor = "blue";
+            tab.style.color = "white";
+          } else {
+            tab.style.backgroundColor = "transparent";
+            tab.style.color = "blue";
+          }
+        });
+      };
+    </script>
+  </body>
+</html>

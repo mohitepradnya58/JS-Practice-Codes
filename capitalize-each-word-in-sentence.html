@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //Write a function that capitalizes the first letter of each word in a sentence.
+
+      const capitalizeWord = (str) => {
+        let arrStr = str.split(" ");
+
+        let newArr = arrStr.map((val, index) => {
+          return val.replace(val[0], val[0].toUpperCase());
+        });
+        return newArr.join(" ");
+      };
+
+      console.log(capitalizeWord("my name is pradnya govind mohite"));
+    </script>
+  </body>
+</html>

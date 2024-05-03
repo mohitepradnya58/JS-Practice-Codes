@@ -1,0 +1,25 @@
+<script>
+  function countNumbers(arr) {
+    let counts = {};
+
+    // Loop through the array
+    for (let num of arr) {
+      // If the number is already in the counts object, increment its count
+      if (counts[num]) {
+        counts[num]++;
+      } else {
+        // Otherwise, initialize its count to 1
+        counts[num] = 1;
+      }
+    }
+
+    return counts;
+  }
+
+  // Example array
+  const numbers = [1, 2, 3, 4, 5, 1, 2, 3, 1, 2, 1];
+
+  // Calculate and display the count of each number
+  const counts = countNumbers(numbers);
+  console.log("Counts:", counts);
+</script>

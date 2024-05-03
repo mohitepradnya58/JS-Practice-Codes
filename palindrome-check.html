@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const isPalindrome = (str) => {
+        //let cleanedStr = str.replace(/[^\w]/g, "").toLowerCase();
+        let cleanedStr = str.replace(/\W/g, "").toLowerCase();
+        char = cleanedStr.split("").reverse().join("");
+        return char === cleanedStr ? true : false;
+      };
+
+      console.log(isPalindrome("A man, a plan, a canal, Panama!"));
+      console.log(isPalindrome("race car"));
+      console.log(isPalindrome("hello"));
+    </script>
+  </body>
+</html>

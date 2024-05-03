@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /* 1.  const findLongestWord = (word) => {
+        if (word.trim().length === 0) {
+          return false;
+        }
+
+        words = word.split(" ");
+
+        words = words.sort((a, b) => b.length - a.length);
+
+        return words[0];
+      };
+
+      console.log(
+        findLongestWord("Watch Javascript Course on YouTube")
+      );*/
+
+      const findLongestWord = (word) => {
+        if (word.trim().length === 0) {
+          return false;
+        }
+
+        let words = word.split(" ");
+
+        let longestWord = words.reduce((acc, curr) => {
+          return curr.length > acc.length ? curr : acc;
+        }, "");
+
+        return longestWord;
+      };
+
+      console.log(findLongestWord("Watch Javascript Course on YouTube"));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const generateHash = (str) => {
+        if (str.length > 280 || str.trim().length === 0) {
+          return false;
+        }
+
+        let word = str.split(" ");
+
+        let words = word.map((curr) => {
+          return curr.replace(curr[0], curr[0].toUpperCase());
+        });
+
+        let joinStr = words.join("");
+        console.log(`#${joinStr}`);
+      };
+
+      console.log(generateHash("my name is Pradnya Mohite"));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /* 1.  const sumNumberDigit = (num) => {
+        let numarr = num.toString().split("");
+        let sum = 0;
+
+        for (i = 0; i < numarr.length; i++) {
+          sum += parseInt(numarr[i]);
+        }
+
+        return sum;
+      };*/
+      const sumNumberDigit = (num) => {
+        let numarr = Array.from(String(num), Number);
+
+        return numarr.reduce((acc, curr) => acc + curr, 0);
+      };
+
+      console.log(sumNumberDigit(2589));
+    </script>
+  </body>
+</html>

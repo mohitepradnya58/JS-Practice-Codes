@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const leapYear = (yr) => {
+        return (yr % 4 === 0 && yr % 100 !== 0) || yr % 400 === 0;
+      };
+      console.log(leapYear(2014));
+      console.log(leapYear(1600));
+      console.log(leapYear(1800));
+    </script>
+  </body>
+</html>
