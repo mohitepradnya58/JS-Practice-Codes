@@ -1,0 +1,26 @@
+<script>
+  /* const generateBar = (arr) => {
+     1.   return arr
+      .map((currelem, index) => {
+        return `${index + 1} :  ${"*".repeat(currelem)}`;
+      })
+      .join("\n");
+    
+
+  };*/
+  const generateBar = (arr) => {
+    return arr
+      .map((curElem, index) => {
+        let start = "";
+        let number = 0;
+        while (number < curElem) {
+          start += "*";
+          number++;
+        }
+        return `${index + 1} : ${start}`;
+      })
+      .join("\n");
+  };
+
+  console.log(generateBar([5, 2, 9, 1]));
+</script>
