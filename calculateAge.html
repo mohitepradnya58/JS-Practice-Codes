@@ -1,0 +1,28 @@
+<script>
+  /*  function calculateAge(birthYear) {
+    const currentYear = new Date().getFullYear();
+    return currentYear - birthYear;
+  }
+
+  const birthYear = 1997;
+  const age = calculateAge(birthYear);
+  console.log("Age:", age);*/
+
+  function calculateAge(dateString) {
+    const today = new Date();
+    const birthDate = new Date(dateString);
+    let age = today.getFullYear() - birthDate.getFullYear();
+    const monthDiff = today.getMonth() - birthDate.getMonth();
+    if (
+      monthDiff < 0 ||
+      (monthDiff === 0 && today.getDate() < birthDate.getDate())
+    ) {
+      age--;
+    }
+    return age;
+  }
+
+  const dob = "1990-05-15";
+  const age = calculateAge(dob);
+  console.log("Age:", age);
+</script>
