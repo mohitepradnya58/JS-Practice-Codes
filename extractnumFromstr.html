@@ -1,0 +1,9 @@
+<script>
+  const extractNum = (str) => {
+    let regex = /\d+/g; // Remove the \g flag
+    return str.match(regex);
+  };
+
+  console.log(extractNum("1a2b3c"));
+  console.log(extractNum("ab123dfg456tg789"));
+</script>
